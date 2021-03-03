@@ -29,16 +29,23 @@ const postEmail = async(email, errorElement) => {
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            });
+            }
+        ).then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("Something went wrong");
+            }
+        }).then((myJson) => {
+            if (myJson["isSuccess"]) {
+                document.getElementById("landing-cta").style.display = "none";
+                document.getElementById("footer-cta").style.display = "none";
 
-        const myJson = await response.json();
-
-        if (myJson["isSuccess"]) {
-            document.getElementById("landing-cta").style.display = "none";
-            document.getElementById("footer-cta").style.display = "none";
-
-            document.getElementById("landing-message").innerHTML = myJson["data"];
-            document.getElementById("footer-message").innerHTML = myJson["data"];
-        }
+                document.getElementById("landing-message").innerHTML = myJson["data"];
+                document.getElementById("footer-message").innerHTML = myJson["data"];
+            }
+        }).catch((error) => {
+            errorElement.innerHTML = "That didn't work. Please try again.";
+        });
     }
 }
