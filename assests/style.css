@@ -3,8 +3,17 @@
     text-align: center;
 }
 
-.cta > button {
+.cta-button {
+    flex: 1;
+}
+
+.cta-button > button {
     float: right;
+}
+
+.cta-email {
+    flex: 2;
+    margin: 0px 16px 16px 0px;
 }
 
 .flex-container {
@@ -16,6 +25,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.footer-cta {
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-cta-email {
+    width: 40%;
+    margin-right: 50px;
 }
 
 .footer-div {
@@ -120,7 +139,7 @@
 }
 
 body { 
-    background: #E5E5E5;
+    background: #F9F9F9;
 	float: none; 
 	margin: 0 auto; 
 	max-width: 2160px; 
@@ -148,9 +167,8 @@ input {
     caret-color:  rgba(51, 204, 51, 0.4);
     font-size: 14px;
     line-height: 21px;
-    margin: 0px 50px 16px 0px;
     padding: 20px 20px;
-    width:  55%;
+    width:  100%;
 }
 
 h3, p {
@@ -169,10 +187,9 @@ ul {
     .cta {
         text-align: left;
     }
-    
-    .cta > button {
+
+    .cta-button > button {
         float: none;
-        margin-right: 0px;
     }
 
     .flex-container {
@@ -181,6 +198,11 @@ ul {
 
     .flex-container.list {
         flex-direction: row;
+    }
+    
+    .footer-cta-email {
+        width: 80%;
+        margin: 0px 0px 16px 0px;
     }
 
     .footer-div {
