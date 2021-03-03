@@ -9,7 +9,7 @@
         <title>Couch</title>
 
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-        <link rel="stylesheet" href="assests/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
         <main>
@@ -32,14 +32,16 @@
                         <p class="landing-p4">
                             Get notified when we launch
                         </p>
-                        <div class="cta flex-container">
+                        <div class="cta flex-container" id="landing-cta">
                             <div class="cta-email">
-                                <input placeholder="Enter a valid email address" />
+                                <input id="landing-email" placeholder="Enter a valid email address" type="email"  required/>
+                                <p class="error-message" id="landing-error"></p>
                             </div>
                             <div class="cta-button">
-                                <button>Notify Me</button>
+                                <button onclick="submitEmailLanding()">Notify Me</button>
                             </div>
                         </div>
+                        <p class="success-message" id="landing-message"></p>
                     </div>
                     <div class="landing-right">
                         <svg viewBox="0 0 602 606" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -206,12 +208,12 @@
                     </p>
                     <div class="flex-container info-div">
                         <div class="info-left">
-                            <img src="assests/img/mock-up.png" class="mock-up-img"/>
+                            <img src="assets/img/mock-up.png" class="mock-up-img"/>
                         </div>
                         <div class="flex-vertical-container info-right">
                             <div class="flex-container list">
                                 <div class="flex-container tick">
-                                    <img src="assests/img/tick.png" class="tick-img"/>
+                                    <img src="assets/img/tick.png" class="tick-img"/>
                                 </div>
                                 <div>
                                     <p class="info-item">
@@ -221,7 +223,7 @@
                             </div>
                             <div class="flex-container tick">
                                 <div class="flex-container tick-img">
-                                    <img src="assests/img/tick.png" class="tick-img"/>
+                                    <img src="assets/img/tick.png" class="tick-img"/>
                                 </div>
                                 <div>
                                     <p class="info-item">
@@ -231,7 +233,7 @@
                             </div>
                             <div class="flex-container tick">
                                 <div class="flex-container tick-img">
-                                    <img src="assests/img/tick.png" class="tick-img"/>
+                                    <img src="assets/img/tick.png" class="tick-img"/>
                                 </div>
                                 <div>
                                     <p class="info-item">
@@ -241,7 +243,7 @@
                             </div>
                             <div class="flex-container tick">
                                 <div class="flex-container tick-img">
-                                    <img src="assests/img/tick.png" class="tick-img"/>
+                                    <img src="assets/img/tick.png" class="tick-img"/>
                                 </div>
                                 <div>
                                     <p class="info-item">
@@ -260,19 +262,23 @@
                     <p class="footer-p">
                         Be the first to know when we launch
                     </p>
-                    <div class="flex-container footer-cta">
+                    <div class="flex-container footer-cta" id="footer-cta">
                         <div class="footer-cta-email">
-                            <input placeholder="Enter a valid email address" />
+                            <input id="footer-email" placeholder="Enter a valid email address" type="email"  required/>
+                            <p class="error-message" id="footer-error"></p>
                         </div>
                         <div class="footer-cta-button">
-                            <button>Notify Me</button>
+                            <button onclick="submitEmailFooter()">Notify Me</button>
                         </div>
                     </div>
+                    <p class="success-message" id="footer-message"></p>
                     <p class="copyright">
                         © Copyright Couch 2021
                     </p>
                 </div>
             </section>
         </footer>
+
+	    <script src="assets/js/script.js"></script>
     </body>
 </html>
