@@ -1,16 +1,15 @@
 .container {
-    margin: 100px 99px 0px 99px;
+    padding: 100px 99px 0px 99px;
     text-align: center;
+}
+
+.cta > button {
+    float: right;
 }
 
 .flex-container {
     display: flex;
     text-align: left;
-}
-
-.flex-container > .tick-img {
-    align-items: center;
-    margin-right: 10px;
 }
 
 .flex-vertical-container {
@@ -19,17 +18,78 @@
     justify-content: center;
 }
 
+.footer-div {
+    margin-bottom: 100px;
+}
+
+.footer-p {
+    margin: 0px 0px 20px 0px;
+    font-size: calc(39px + (48 - 39) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 500;
+    line-height: 72px;
+}
+
+.info {
+    padding: 0px 0px;
+    background: #FBFEFB;
+}
+
+.info-div {
+    margin: 50px 99px 0px 99px;
+    padding-bottom: 80px;
+}
+
+.info-item {
+    line-height: 27px;
+    font-size: calc(15px + (15 - 15) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 400;
+}
+
 .info-left {
-    flex: 1;
+    flex: 2;
+    margin-right: 80px;
 }
 
 .info-right {
     align-content: center;
-    flex: 2;
+    flex: 3;
+}
+
+.info-p {
+    margin: 100px 99px 0px 99px;
+    padding-top: 80px;
 }
 
 .landing-left {
     flex: 1;
+}
+
+.landing-p1, .landing-p1 > span {
+    font-size: calc(45px + (55 - 45) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 400;
+    line-height: 86.78px;
+}
+
+.landing-p1 > span {
+    font-weight: 900;
+}
+
+.landing-p2 {
+    font-size: calc(21px + (26 - 21) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 300;
+    line-height: 39px;
+}
+
+.landing-p3 {
+    font-size: calc(32px + (40 - 32) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 400;
+    line-height: 60px;
+}
+
+.landing-p4 {
+    font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 300;
+    line-height: 30px;
 }
 
 .landing-right {
@@ -41,28 +101,121 @@
     max-width: 100%;
 }
 
+.tick {
+    align-items: center;
+}
+
+.tick-img {
+    align-items: center;
+    height: 44px;
+    margin-right: 10px;
+    width: 44px;
+}
+
+* {
+    color: #0A290A;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+}
+
+body { 
+    background: #E5E5E5;
+	float: none; 
+	margin: 0 auto; 
+	max-width: 2160px; 
+}
+
+button {
+    background: #33CC33;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 15px 24px;
+    size: 20px;
+}
+
+button:focus, input:focus {
+    outline: none;
+}
+
+input {
+    border: 1px solid rgba(51, 204, 51, 0.4);
+    border-radius: 10px;
+    box-sizing: border-box;
+    caret-color:  rgba(51, 204, 51, 0.4);
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0px 50px 16px 0px;
+    padding: 20px 20px;
+    width:  55%;
+}
+
+h3, p {
+    margin: 23px 0px;
+}
+
 ul {
     list-style-type:none;
 }
 
 @media (max-width: 800px) {
     .container {
-        margin: 24px 24px;
+        padding: 16px 24px;
+    }
+
+    .cta {
+        text-align: left;
+    }
+    
+    .cta > button {
+        float: none;
+        margin-right: 0px;
     }
 
     .flex-container {
         flex-direction: column;
     }
 
-    .flex-container.list, .flex-container.tick {
+    .flex-container.list {
         flex-direction: row;
     }
 
-    .flex-container > .tick-img {
-        justify-content: center;
+    .footer-div {
+        margin-bottom: 24px;
     }
-  
+
+    .info-div, .info-p {
+        margin: 16px 24px 0px 24px;
+    }
+    
     .info-left, .info-right {
         flex: 1;
+    }
+    
+    .landing-p1, .landing-p1 > span {
+        line-height: 76.78px;
+    }
+    
+    .tick {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .tick-img {
+        height: 30px;
+        justify-content: center;
+        width: 30px;
+    }
+  
+    button {
+        float: none;
+    }
+    
+    input {
+        margin-right: 0px;
+        width: 100%;
     }
 }
