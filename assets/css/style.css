@@ -1,24 +1,11 @@
 .container {
-    padding: 100px 99px 0px 99px;
+    padding: 0px 7.7vw 0px 7.7vw;
     text-align: center;
-}
-
-.cta-button {
-    flex: 1;
-}
-
-.cta-button > button {
-    float: right;
-}
-
-.cta-email {
-    flex: 2;
-    margin: 0px 16px 16px 0px;
 }
 
 .error-message {
     color: red;
-    font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 0.85vw;
     margin: 0px 0px;
     text-align: left;
 }
@@ -34,68 +21,110 @@
     justify-content: center;
 }
 
-.footer-cta {
+.brand, .nav-links {
+    align-items: center;
+    display: flex;
+}
+
+.brand-logo {
+    margin-right: 0.63vw;
+    height: 3.125vw;
+    width: 3.125vw;
+}
+
+.brand-name {
+    font-size: 1.25vw;
+    font-weight: 500;
+    line-height: 200%;
+}
+
+.copyright {
+    font-size: 1.25vw;
+    line-height: 50%;
+    margin-top: 0;
+}
+
+.cta {
+    justify-content: center;
+    width: 60%;
+}
+
+.cta-div {
+    margin: 9.375vh 0 9.1vh 0;
+}
+
+.cta-button, .landing-cta-button {
+    flex: 1;
+}
+
+.cta-email, .landing-cta-email {
+    flex: 4;
+    margin: 0 2.5vw 2.5vh 0;
+}
+
+.cta-p {
+    margin: 0 0 3.75vh 0;
+    font-size: 2.5vw;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.cta-wrapper {
+    display: flex;
     justify-content: center;
 }
 
-.footer-cta-email {
-    width: 40%;
-    margin-right: 50px;
+.header-div {
+    padding-top: 4.2vh;
+    justify-content: space-between;
 }
 
-.footer-div {
-    margin-bottom: 100px;
-}
-
-.footer-p {
-    margin: 0px 0px 20px 0px;
-    font-size: calc(39px + (48 - 39) * ((100vw - 300px) / (1600 - 300)));
-    font-weight: 500;
-    line-height: 72px;
+.hero-img {
+    height: auto;
+    width: 100%;
 }
 
 .info {
-    padding: 0px 0px;
+    padding: 0 0;
     background: #FBFEFB;
 }
 
 .info-div {
-    margin: 50px 99px 0px 99px;
-    padding-bottom: 80px;
-}
-
-.info-item {
-    line-height: 27px;
-    font-size: calc(15px + (15 - 15) * ((100vw - 300px) / (1600 - 300)));
-    font-weight: 400;
+    margin: 7.8vh 7.7vw 0px 7.7vw;
+    padding-bottom: 10.5vh;
 }
 
 .info-left {
     flex: 2;
-    margin-right: 80px;
+    margin-right: 6.25vw;
 }
 
 .info-right {
     align-content: center;
     flex: 3;
+    padding-bottom: 6.25vh;
 }
 
 .info-p {
-    font-size: calc(39px + (48 - 39) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 2.5vw;
     font-weight: 500;
-    line-height: 72px;
-    margin: 100px 99px 0px 99px;
-    padding-top: 80px;
+    line-height: 150%;
+    margin: 15.625vh 7.7vw 0px 7.7vw;
+    padding-top: 9.375vh;
 }
 
-.landing-left {
+.landing {
+    padding-top: 0;
+}
+
+.landing-left, .landing-right {
     flex: 1;
 }
 
 .landing-p1, .landing-p1 > span {
-    font-size: calc(45px + (55 - 45) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 3.125vw;
     font-weight: 400;
-    line-height: 86.78px;
+    line-height: 120%;
 }
 
 .landing-p1 > span {
@@ -103,30 +132,59 @@
 }
 
 .landing-p2 {
-    font-size: calc(21px + (26 - 21) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 1.25vw;
     font-weight: 300;
-    line-height: 39px;
+    line-height: 200%;
 }
 
 .landing-p3 {
-    font-size: calc(32px + (40 - 32) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 1.1vw;
     font-weight: 400;
-    line-height: 60px;
+    line-height: 229%;
+    padding-top: 3.25vh;
+    margin-bottom: 0;
 }
 
 .landing-p4 {
-    font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 1.875vw;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 100%;
+    margin-top: 1.23vh;
+    margin-bottom: 3.7vh;
 }
 
-.landing-right {
-    flex: 1;
+.landing-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.list-item {
+    margin-bottom: 6.25vh;
 }
 
 .mock-up-img {
     height: auto;
     max-width: 100%;
+}
+
+.nav-links > a {
+    font-size: 1.1vw;
+    font-weight: 500;
+    line-height: 170%;
+    padding: 0 1.25vw;
+}
+
+.social-icon {
+    height: 2.5vw;
+    width: 2.5vw;
+    margin-left: 7.8vw;
+}
+
+.socials {
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 0 5vh 0;
 }
 
 .success-message {
@@ -139,16 +197,20 @@
 
 .tick-img {
     align-items: center;
-    height: 44px;
-    margin-right: 10px;
-    width: 44px;
+    height: 2.5vw;
+    margin-right: 1.172vw;
+    width: 2.5vw;
 }
 
 * {
     color: #0A290A;
     font-family: Poppins, sans-serif;
-    font-size: 18px;
+    font-size: 1.4vw;
     font-style: normal;
+}
+
+a {
+    text-decoration: none;
 }
 
 body { 
@@ -165,9 +227,10 @@ button {
     color: white;
     cursor: pointer;
     font-weight: 600;
-    line-height: 30px;
-    padding: 15px 24px;
-    size: 20px;
+    line-height: 4.769vh;
+    padding: 1.56vh 3.91vw;
+    font-size: 1.56vw;
+    white-space: nowrap;
 }
 
 button:focus, input:focus {
@@ -176,50 +239,49 @@ button:focus, input:focus {
 
 input {
     border: 1px solid rgba(51, 204, 51, 0.4);
-    border-radius: 10px;
+    border-radius: 0.78vw;
     box-sizing: border-box;
     caret-color:  rgba(51, 204, 51, 0.4);
-    font-size: 14px;
-    line-height: 21px;
-    padding: 20px 20px;
+    font-size: 1.09vw;
+    line-height: 4.769vh;
+    padding: 1.56vh 1.56vw;
     width:  100%;
 }
 
 h3, p {
-    margin: 23px 0px;
+    margin: 2.5vh 0 0 0;
+}
+
+.info-item {
+    line-height: 150%;
+    font-size: 1.25vw;
+    font-weight: 400;
+    margin: 0 0;
 }
 
 ul {
     list-style-type:none;
 }
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
     .container {
         padding: 16px 24px;
-    }
-
-    .cta {
-        text-align: left;
-    }
-
-    .cta-button > button {
-        float: none;
     }
 
     .flex-container {
         flex-direction: column;
     }
 
-    .flex-container.list {
+    .flex-container.list, .header-div, .tick {
         flex-direction: row;
     }
     
-    .footer-cta-email {
+    .cta-email {
         width: 80%;
         margin: 0px 0px 16px 0px;
     }
 
-    .footer-div {
+    .cta {
         margin-bottom: 24px;
     }
 
@@ -231,12 +293,19 @@ ul {
         flex: 1;
     }
     
+    .landing-cta {
+        text-align: left;
+    }
+
+    .landing-cta-button > button {
+        float: none;
+    }
+
     .landing-p1, .landing-p1 > span {
         line-height: 76.78px;
     }
     
     .tick {
-        flex-direction: row;
         align-items: center;
     }
 
@@ -254,4 +323,4 @@ ul {
         margin-right: 0px;
         width: 100%;
     }
-}
+} */
