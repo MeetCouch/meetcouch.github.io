@@ -14,9 +14,11 @@ const submitEmailCta = async() => {
 
 const postEmail = async(email, errorElement) => {
     if (!email.checkValidity()) {
+        errorElement.style.display = 'block';
         errorElement.innerHTML = email.validationMessage;
     }
     else {
+        errorElement.style.display = 'none';
         var object = {
             email: email.value
         };
@@ -40,11 +42,13 @@ const postEmail = async(email, errorElement) => {
             if (myJson["isSuccess"]) {
                 document.getElementById("landing-cta").style.display = "none";
                 document.getElementById("cta").style.display = "none";
-
+                document.getElementById("landing-message").style.display = 'block';
                 document.getElementById("landing-message").innerHTML = myJson["data"];
+                document.getElementById("cta-message").style.display = 'block';
                 document.getElementById("cta-message").innerHTML = myJson["data"];
             }
         }).catch((error) => {
+            errorElement.style.display = 'block';
             errorElement.innerHTML = "That didn't work. Please try again.";
         });
     }
