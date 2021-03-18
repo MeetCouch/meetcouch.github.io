@@ -19,6 +19,18 @@ const postEmail = async(email, errorElement) => {
     }
     else {
         errorElement.style.display = 'none';
+
+        var spinner = document.getElementsByClassName("fa-spinner")[0];
+        spinner.style.display = 'block';
+
+        var buttons = document.getElementsByTagName("button");
+        
+        Array.prototype.forEach.call(buttons, button => {
+            button.style.background = '#55EE55'
+            button.disabled = true;
+            button.innerHTML = spinner.outerHTML;
+        });
+
         var object = {
             email: email.value
         };
@@ -50,6 +62,14 @@ const postEmail = async(email, errorElement) => {
         }).catch((error) => {
             errorElement.style.display = 'block';
             errorElement.innerHTML = "That didn't work. Please try again.";
+
+            spinner.style.display = 'none';
+            
+            Array.prototype.forEach.call(buttons, button => {
+                button.style.background = '#33CC33'
+                button.innerHTML = "Notify Me" + spinner.outerHTML;
+                button.disabled = false;
+            });
         });
     }
 }

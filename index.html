@@ -8,6 +8,7 @@
         <meta name="keyword" content="anonymous,couch,counselling,help,mental health,safe space,self help,therapy">
         <title>Couch</title>
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
@@ -59,7 +60,7 @@
                                 <p class="error-message" id="landing-error"></p>
                             </div>
                             <div class="landing-cta-button">
-                                <button onclick="submitEmailLanding()">Notify Me</button>
+                                <button onclick="submitEmailLanding()" class="icon-button">Notify Me<i class="fa fa-spinner fa-spin"></i></button>
                             </div>
                         </div>
                         <p class="success-message" id="landing-message"></p>
@@ -387,7 +388,7 @@
                                 <p class="error-message" id="cta-error"></p>
                             </div>
                             <div class="cta-button">
-                                <button onclick="submitEmailCta()">Notify Me</button>
+                                <button onclick="submitEmailCta()">Notify Me<i class="fa fa-spinner fa-spin"></i></button>
                             </div>
                         </div>
                         <p class="success-message" id="cta-message"></p>
