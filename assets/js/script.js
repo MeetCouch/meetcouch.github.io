@@ -31,6 +31,12 @@ const postEmail = async(email, errorElement) => {
             button.innerHTML = spinner.outerHTML;
         });
 
+        var inputs = document.getElementsByTagName("input");
+        
+        Array.prototype.forEach.call(inputs, input => {
+            input.disabled = true;
+        });
+
         var object = {
             email: email.value
         };
@@ -62,6 +68,10 @@ const postEmail = async(email, errorElement) => {
         }).catch((error) => {
             errorElement.style.display = 'block';
             errorElement.innerHTML = "That didn't work. Please try again.";
+
+            Array.prototype.forEach.call(inputs, input => {
+                input.disabled = false;
+            });
 
             spinner.style.display = 'none';
             
