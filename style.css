@@ -466,6 +466,7 @@ ul {
         line-height: 100%;
         padding: 2.1875vh 2.1875vh;
         width:  100%;
+        -webkit-appearance: none;
     }
 
     h3, p {
