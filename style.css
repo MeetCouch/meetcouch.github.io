@@ -250,7 +250,7 @@ button:focus, input:focus {
 }
 
 input {
-    border: 1px solid rgba(51, 204, 51, 0.4);
+    border: 0.078125vw solid rgba(51, 204, 51, 0.4);
     border-radius: 0.78vw;
     box-sizing: border-box;
     caret-color:  rgba(51, 204, 51, 0.4);
@@ -460,6 +460,7 @@ ul {
     }
 
     input {
+        border: 0.15625vh solid rgba(51, 204, 51, 0.4);
         border-radius: 1.5625vh;
         font-size: 2.1875vh;
         line-height: 100%;
